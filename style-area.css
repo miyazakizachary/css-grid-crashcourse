@@ -1,0 +1,53 @@
+/*body as grid container*/
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: inherit;
+    margin: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 5rem 1fr 4.375rem;
+}
+
+header, main, nav, aside, footer {
+    background-color: steelblue;
+    color: #fff;
+    padding: 1.25rem;
+    border: skyblue .16rem solid;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
